@@ -1,17 +1,17 @@
-export const Controls = () => {
+export const Controls = ({ currentItem, totalItems, onChange }) => {
   return (
     <section>
       <button
         type="button"
-        disabled={index === 0}
-        onClick={() => this.changeValue(-1)}
+        disabled={currentItem === 1}
+        onClick={() => onChange(-1)}
       >
         Назад
       </button>
       <button
         type="button"
-        disabled={index === totalItems}
-        onClick={() => this.changeValue(+1)}
+        disabled={currentItem === totalItems}
+        onClick={() => onChange(+1)}
       >
         Вперед
       </button>
